@@ -6,6 +6,7 @@
 
 html, body {
     height: 100%; /* Define a altura do html e body para 100% */
+    overflow-y: auto;
 }
 
 body {
@@ -133,26 +134,31 @@ header {
 /* Estilos para o teclado personalizado */
 #keyboard {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; /* Empilha as linhas de teclas uma acima da outra */
+    gap: 10px; /* Espaçamento entre as linhas de teclas */
     margin-top: 20px; /* Margem acima do teclado */
+    overflow-y: auto; /* Permite rolagem vertical se necessário */
+    max-height: 300px; /* Altura máxima para o teclado, ajuste conforme necessário */
 }
 
 .keyboard-row {
     display: flex;
-    gap: 5px;
+    justify-content: center; /* Centraliza as teclas dentro da linha */
+    gap: 5px; /* Espaçamento entre as teclas */
 }
 
 .key {
-    width: 50px;
-    height: 50px;
-    font-size: 16px;
+    width: 50px; /* Largura padrão das teclas */
+    height: 50px; /* Altura das teclas */
+    font-size: 16px; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto nas teclas */
+    display: flex; /* Para centralizar o texto verticalmente */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
 }
-
 .large-key {
-    width: 120px;
+    width: 120px; /* Largura das teclas maiores */
 }
-
 /* Estilos para os botões de iniciar e encerrar */
 #start-btn {
     background-color: #4CAF50;
@@ -178,6 +184,9 @@ header {
     header {
         flex-direction: column; /* Muda a direção para coluna */
         height: auto; /* Ajusta a altura do header */
+    }
+    #keyboard {
+        max-height: 250px; /* Ajuste a altura máxima em telas menores */
     }
 
     .topo {
@@ -209,8 +218,11 @@ header {
 @media (max-width: 480px) {
 
     body{
-        overflow: hidden;
+        overflow:scroll;
     }
+
+   
+    
     #question-text {
         font-size: 1.2em; /* Diminui o tamanho da fonte da pergunta */
     }

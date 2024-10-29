@@ -8,18 +8,19 @@
 </head>
 
 <body>
+    <!-- Cabeçalho principal -->
     <header>
+        <!-- Barra de navegação superior com logomarca e título -->
         <nav class="topo">
-            <img src="/imagens/logomarca.png" alt="logo-auto-escola">
-            <h1>Formação e Capacitação de Condutores para um Transito mais Seguro!</h1>
-
+            <img src="/imagens/logomarca.png" alt="logo-auto-escola"> <!-- Logomarca -->
+            <h1>Formação e Capacitação de Condutores para um Trânsito mais Seguro!</h1> <!-- Título -->
         </nav>
-
     </header>
 
+    <!-- Cronômetro de tempo restante -->
     <div id="timer">Tempo Restante: <span id="timer-count">60:00</span></div>
     
-    <!-- Tela inicial com mensagem de boas-vindas e explicações -->
+    <!-- Tela inicial com mensagem de boas-vindas e instruções -->
     <div id="start-screen">
         <h1>Bem-vindo(a) à Nossa Prova!</h1>
         <p>Você só pode marcar uma opção por vez. Utilize o teclado personalizado abaixo:</p>
@@ -30,12 +31,14 @@
         </ul>
     </div>
 
-    <!-- Tela de perguntas -->
+    <!-- Container principal do quiz -->
     <div id="quiz-container" class="hidden">
+        <!-- Container de perguntas e respostas -->
         <div id="question-container">
-            <div id="image-container"></div>
-            <div id="question-text"></div> <!-- Contêiner para a pergunta -->
+            <div id="image-container"></div> <!-- Contêiner para imagem da questão -->
+            <div id="question-text"></div> <!-- Texto da pergunta -->
             <div id="options-container">
+                <!-- Alternativas de resposta -->
                 <p id="option-a" class="option"></p>
                 <p id="option-b" class="option"></p>
                 <p id="option-c" class="option"></p>
@@ -44,13 +47,14 @@
             </div>
         </div>
 
-        <!-- Teclado personalizado para navegar e selecionar respostas -->
+        <!-- Teclado personalizado para navegação e seleção de respostas -->
         <div id="keyboard">
             <div class="keyboard-row">
-                <button id="start-btn" class="key large-key">Iniciar</button>
-                <button id="end-btn" class="key large-key">Encerrar</button>
+                <button id="start-btn" class="key large-key">Iniciar</button> <!-- Botão de Início -->
+                <button id="end-btn" class="key large-key">Encerrar</button> <!-- Botão de Encerrar -->
             </div>
             <div class="keyboard-row">
+                <!-- Botões de resposta A-E -->
                 <button id="answer-a" class="key">A</button>
                 <button id="answer-b" class="key">B</button>
                 <button id="answer-c" class="key">C</button>
@@ -58,18 +62,19 @@
                 <button id="answer-e" class="key">E</button>
             </div>
             <div class="keyboard-row">
-                <button id="blank-btn" class="key large-key">Deixar em Branco</button>
+                <button id="blank-btn" class="key large-key">Deixar em Branco</button> <!-- Botão para pular pergunta -->
                 <span class="key-spacer"></span>
-                <button id="setaone" class="key key-arrow">↑</button>
-                <button id="setatwo" class="key key-arrow">↓</button>
+                <button id="setaone" class="key key-arrow">↑</button> <!-- Botão de seta para cima -->
+                <button id="setatwo" class="key key-arrow">↓</button> <!-- Botão de seta para baixo -->
             </div>
             <div class="keyboard-row">
-                <button id="prev-btn" class="key large-key">Anterior</button>
-                <button id="next-btn" class="key large-key">Próximo</button>
+                <button id="prev-btn" class="key large-key">Anterior</button> <!-- Botão para questão anterior -->
+                <button id="next-btn" class="key large-key">Próximo</button> <!-- Botão para próxima questão -->
             </div>
         </div>
     </div>
 
-    <script src="arquivos.js"></script> <!-- Conecta o JavaScript externo -->
+    <!-- Conexão do JavaScript -->
+    <script src="arquivos.js"></script>
 </body>
-</html>  
+</html>
