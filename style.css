@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Define a altura do html e body para 100% */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto; /* Permite rolagem horizontal */
+    overflow-y: hidden; /* Evita rolagem vertical */
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    background-color: #2B2A28;
+    display: flex;
+    padding: 10px 0; /* Corrige o padding */
+}
+
+.topo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.topo img {
+    width: 200px;
+}
+
+.topo h1 {
+    color: aliceblue;
+    margin-top: 25px; /* Ajusta a margem superior */
+    margin-left: 250px;
+    padding: 10px 20px; /* Adiciona padding para espaçamento interno */
+}
+
+/* Posiciona o cronômetro no canto superior direito */
+#timer {
+    position: absolute;
+    top: 20px; /* Ajuste para não colidir com o header */
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+/* Estilo para o container de quiz */
+#quiz-container {
+    padding: 20px;
+    margin-top: 20px; /* Ajusta a margem superior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* Permite que o container ocupe espaço restante */
+}
+
+/* Estilo para o tempo final */
+#final-time {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 20px;
+}
+
+#question-container {
+    transition: opacity 0.5s ease-in-out; /* Transição para melhorar a experiência */
+}
+
+/* Oculta elementos com a classe "hidden" */
+.hidden {
+    display: none;
+}
+
+/* Estilo inicial da tela de boas-vindas */
+#start-screen {
+    text-align: center;
+    padding-top: 200px;
+}
+
+/* Estilos para o container do quiz */
+#quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Container da pergunta e opções */
+#question-container {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    display: block;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Estilo para a imagem da pergunta */
+#image-container img {
+    max-width: 300px;
+    max-height: 200px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para o texto da pergunta (em destaque) */
+#question-text {
+    font-size: 1.5em; /* Aumenta o tamanho da pergunta */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Alinhamento centralizado das opções, mas deslocadas à esquerda em relação à pergunta */
+#options-container {
+    text-align: left;
+    margin: 0 auto; /* Centraliza o bloco de opções */
+}
+
+.option {
+    cursor: pointer;
+    font-size: 1.2em; /* Mantém o tamanho da fonte das opções */
+}
+
+/* Estilos para o teclado personalizado */
+#keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px; /* Margem acima do teclado */
+}
+
+.keyboard-row {
+    display: flex;
+    gap: 5px;
+}
+
+.key {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+}
+
+.large-key {
+    width: 120px;
+}
+
+/* Estilos para os botões de iniciar e encerrar */
+#start-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#end-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Estilos para os botões de seta e navegação */
+#setaone, #setatwo {
+    background-color: antiquewhite;
+}
+
+#prev-btn, #next-btn {
+    background-color: rgb(215, 236, 250);
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Muda a direção para coluna */
+        height: auto; /* Ajusta a altura do header */
+    }
+
+    .topo {
+        flex-direction: column; /* Coloca itens em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .topo h1 {
+        margin-left: 0; /* Remove margem à esquerda em telas menores */
+    }
+
+    #question-container {
+        margin-top: 50px; /* Reduz a margem superior */
+    }
+
+    #keyboard {
+        margin-top: 10px; /* Ajusta a margem do teclado em telas menores */
+    }
+
+    #timer {
+        font-size: 1em; /* Diminui o tamanho da fonte do timer */
+        padding: 5px 10px; /* Diminui o padding do timer */
+        margin-top: 10px; /* Adiciona margem acima do cronômetro */
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    body{
+        overflow: hidden;
+    }
+    #question-text {
+        font-size: 1.2em; /* Diminui o tamanho da fonte da pergunta */
+    }
+
+    .option {
+        font-size: 1em; /* Diminui o tamanho da fonte das opções */
+    }
+
+    .key {
+        width: 40px; /* Ajusta o tamanho das teclas do teclado */
+        height: 40px;
+    }
+
+    .large-key {
+        width: 100px; /* Ajusta o tamanho da tecla grande */
+    }
+
+    #timer {
+        font-size: 1em; /* Diminui o tamanho da fonte do timer */
+        padding: 5px 10px; /* Diminui o padding do timer */
+        margin-top: 10px; /* Adiciona margem acima do cronômetro */
+    }
+}

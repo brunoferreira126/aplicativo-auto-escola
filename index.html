@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Prova</title>
+    <link rel="stylesheet" href="style.css"> <!-- Conecta o CSS externo -->
+</head>
+
+<body>
+    <header>
+        <nav class="topo">
+            <img src="/imagens/logomarca.png" alt="logo-auto-escola">
+            <h1>Formação e Capacitação de Condutores para um Transito mais Seguro!</h1>
+
+        </nav>
+
+    </header>
+
+    <div id="timer">Tempo Restante: <span id="timer-count">60:00</span></div>
+    
+    <!-- Tela inicial com mensagem de boas-vindas e explicações -->
+    <div id="start-screen">
+        <h1>Bem-vindo(a) à Nossa Prova!</h1>
+        <p>Você só pode marcar uma opção por vez. Utilize o teclado personalizado abaixo:</p>
+        <ul>
+            <li><strong>Setas:</strong> ↑ Próxima pergunta, ↓ Pergunta anterior.</li>
+            <li><strong>Teclas A-E:</strong> Selecione a alternativa correspondente.</li>
+            <li><strong>Deixar em Branco:</strong> Pular a pergunta sem responder.</li>
+        </ul>
+    </div>
+
+    <!-- Tela de perguntas -->
+    <div id="quiz-container" class="hidden">
+        <div id="question-container">
+            <div id="image-container"></div>
+            <div id="question-text"></div> <!-- Contêiner para a pergunta -->
+            <div id="options-container">
+                <p id="option-a" class="option"></p>
+                <p id="option-b" class="option"></p>
+                <p id="option-c" class="option"></p>
+                <p id="option-d" class="option"></p>
+                <p id="option-e" class="option"></p>
+            </div>
+        </div>
+
+        <!-- Teclado personalizado para navegar e selecionar respostas -->
+        <div id="keyboard">
+            <div class="keyboard-row">
+                <button id="start-btn" class="key large-key">Iniciar</button>
+                <button id="end-btn" class="key large-key">Encerrar</button>
+            </div>
+            <div class="keyboard-row">
+                <button id="answer-a" class="key">A</button>
+                <button id="answer-b" class="key">B</button>
+                <button id="answer-c" class="key">C</button>
+                <button id="answer-d" class="key">D</button>
+                <button id="answer-e" class="key">E</button>
+            </div>
+            <div class="keyboard-row">
+                <button id="blank-btn" class="key large-key">Deixar em Branco</button>
+                <span class="key-spacer"></span>
+                <button id="setaone" class="key key-arrow">↑</button>
+                <button id="setatwo" class="key key-arrow">↓</button>
+            </div>
+            <div class="keyboard-row">
+                <button id="prev-btn" class="key large-key">Anterior</button>
+                <button id="next-btn" class="key large-key">Próximo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="arquivos.js"></script> <!-- Conecta o JavaScript externo -->
+</body>
+</html>  
